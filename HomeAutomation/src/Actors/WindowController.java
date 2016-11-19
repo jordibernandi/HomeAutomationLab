@@ -18,9 +18,9 @@ public class WindowController extends Observer {
 		LightSensor lightSensor = new LightSensor(mainObserver.getLight());
 		
 		if(lightSensor.getLight() > 60) {
-			System.out.println("Light: " + mainObserver.getLight() + " , Window is CLOSING DOWN!");
+			System.out.println("Window is CLOSING DOWN, weil die Light " + lightSensor.getLight() + " ist");
 		} else {
-			System.out.println("Light: " + mainObserver.getLight() + " , Window is OPENING UP!");
+			System.out.println("Window is OPENING UP, weil die Light " + lightSensor.getLight() + " ist");
 		}
 	}
 

@@ -18,9 +18,9 @@ public class ACController extends Observer{
 		TempSensor tempSensor = new TempSensor(mainObserver.getTemp());
 		
 		if(tempSensor.getTemp() > 26) {
-			System.out.println("Temp: " + tempSensor.getTemp() + " , AC is turning ON!");
+			System.out.println("AC is TURNING ON, weil die Temperatur " + tempSensor.getTemp() + " ist");
 		} else {
-			System.out.println("Temp: " + tempSensor.getTemp() + " , AC is turning OFF!");
+			System.out.println("AC is TURNING OFF, weil die Temperatur " + tempSensor.getTemp() + " ist");
 		}
 	}
 

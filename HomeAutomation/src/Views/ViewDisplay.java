@@ -28,7 +28,9 @@ public class ViewDisplay {
 		System.out.println("Temp: " + temp + " celcius");
 		System.out.println("Time: " + time + " 'clock");
 		
-		mainObserver.setChanged(time, light, temp);
+		System.out.println();
+		
+		mainObserver.setSensors(time, light, temp);
 
 	}
 }

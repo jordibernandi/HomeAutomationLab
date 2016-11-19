@@ -56,7 +56,7 @@ public class MainObserver {
 		}
 	}
 	
-	public void setChanged(int time, int light, int temp) {
+	public void setSensors(int time, int light, int temp) {
 		this.time = time;
 		this.light = light;
 		this.temp = temp;
