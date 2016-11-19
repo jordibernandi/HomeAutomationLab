@@ -1,22 +1,26 @@
 package Actors;
 
+import Controllers.MainObserver;
 import Controllers.Observer;
 import Sensors.LightSensor;
 
 public class WindowController extends Observer {
 	
-	public WindowController (LightSensor lightSensor) {
-		this.lightSensor = lightSensor;
-		this.lightSensor.attach(this);
+	public WindowController (MainObserver mainObserver) {
+		this.mainObserver = mainObserver;
+		this.mainObserver.attach(this);
 	}
 
 	@Override
 	public void updateStatus() {
 		// TODO Auto-generated method stub
+		
+		LightSensor lightSensor = new LightSensor(mainObserver.getLight());
+		
 		if(lightSensor.getLight() > 60) {
-			System.out.println("Light: " + lightSensor.getLight() + " , Window is CLOSING DOWN!");
+			System.out.println("Light: " + mainObserver.getLight() + " , Window is CLOSING DOWN!");
 		} else {
-			System.out.println("Light: " + lightSensor.getLight() + " , Window is OPEING UP!");
+			System.out.println("Light: " + mainObserver.getLight() + " , Window is OPENING UP!");
 		}
 	}
 

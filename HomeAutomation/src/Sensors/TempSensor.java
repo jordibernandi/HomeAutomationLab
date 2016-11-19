@@ -1,30 +1,35 @@
 package Sensors;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import Controllers.Observer;
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//import Controllers.Observer;
 
 public class TempSensor {
 
-	private List<Observer> observers = new ArrayList<Observer>();
+//	private List<Observer> observers = new ArrayList<Observer>();
 	private int temp;
+	
+	public TempSensor(int temp) {
+		super();
+		this.temp = temp;
+	}
 	
 	public int getTemp() {
 		return temp;
 	}
 	public void setTemp(int temp) {
 		this.temp = temp;
-		notifyAllObservers();
+//		notifyAllObservers();
 	}
 	
-	public void attach(Observer observer) {
-		observers.add(observer);
-	}
-	
-	public void notifyAllObservers() {
-		for(Observer observer : observers) {
-			observer.updateStatus();
-		}
-	}
+//	public void attach(Observer observer) {
+//		observers.add(observer);
+//	}
+//	
+//	public void notifyAllObservers() {
+//		for(Observer observer : observers) {
+//			observer.updateStatus();
+//		}
+//	}
 }
